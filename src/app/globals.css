@@ -18,6 +18,8 @@
   --animate-blob: var(--animate-blob-keyframes) 7s ease-in-out infinite;
   --animate-delay-2000: 2s;
   --animate-delay-4000: 4s;
+
+  --animate-bounce-on-hover: bounce-animation 0.6s infinite alternate;
 }
 
 @keyframes blob {

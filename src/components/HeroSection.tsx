@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { FaCode, FaPalette, FaEnvelope } from "react-icons/fa"; // Assuming you have react-icons installed
 import { FaFolderOpen } from "react-icons/fa6";
-import {
-  TbBrandNextjs,
-  TbBrandReact,
-  TbBrandTailwind,
-  TbBrandVercel,
-} from "react-icons/tb";
 
-const techStack = [
+interface TechStack {
+  name: string;
+  src: string;
+}
+
+const techStack: TechStack[] = [
   {
     name: "React",
     src: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/reactjs.svg",
@@ -42,7 +41,7 @@ const HeroSection = () => {
         <div className="h-full flex flex-row justify-between border-l-[1px] border-[#4F4F4F] pl-4">
           <div className="flex-1 space-y-6 text-center lg:text-left">
             <h1 className="text-5xl md:text-[4.5rem] font-bold leading-tight">
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               {/* Apply gradient to this single span encompassing both names */}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
                 Atharva
@@ -55,7 +54,7 @@ const HeroSection = () => {
               Frontend Developer & UI Enthusiast
             </h2>
 
-            <p className="text-gray-600 max-w-lg mx-auto lg:mx-0 text-[1.2rem]">
+            <p className="text-gray-600 max-w-lg mx-auto lg:mx-0 text-[1.4rem]">
               I craft fast, accessible, and visually polished websites using
               React and Next.js.
             </p>
