@@ -3,7 +3,7 @@ import React from "react";
 
 const SectionContent = () => {
   return (
-    <section className="h-screen flex flex-row relative bg-white px-[6.25rem] my-4">
+    <section className="h-screen flex flex-row relative bg-transparent px-[6.25rem] my-2.5">
       {/* Left Content */}
       <div className="md:w-1/3 h-full flex flex-col pb-[6.25rem] relative">
         {/* Number */}

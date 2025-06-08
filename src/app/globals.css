@@ -4,6 +4,36 @@
   --font-helvatica: Helvatica, sans-serif;
   --font-raleway: Raleway, sans-serif;
   --font-inter: Inter, sans-serif;
+  --animate-blob-keyframes: @keyframes blob {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  --animate-blob: var(--animate-blob-keyframes) 7s ease-in-out infinite;
+  --animate-delay-2000: 2s;
+  --animate-delay-4000: 4s;
+}
+
+@keyframes blob {
+  /* This must be a global @keyframes rule */
+  from {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  to {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 html {

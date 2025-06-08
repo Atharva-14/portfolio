@@ -7,7 +7,7 @@ interface SectionTitleProps {
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ upperTitle, title }) => {
   return (
-    <div className="h-screen flex flex-col relative bg-white px-[6.25rem] my-4">
+    <div className="h-screen flex flex-col relative bg-transparent px-[6.25rem] my-2.5">
       {/* Vertical Line (stick to edge, not affected by padding) */}
       <svg
         width="3"
