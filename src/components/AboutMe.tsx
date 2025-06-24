@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { Card, CardContent } from "./ui/Card";
-
 import { FaDownload } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 

@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
         hostname: "dqy38fnwh4fqs.cloudfront.net",
       },
     ],
+    domains: ["api.microlink.io"],
   },
 };
 

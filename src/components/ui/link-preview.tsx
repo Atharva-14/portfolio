@@ -1,6 +1,6 @@
 "use client";
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 
+import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import { encode } from "qss";
 import React from "react";
 import {
@@ -9,8 +9,8 @@ import {
   useMotionValue,
   useSpring,
 } from "motion/react";
-
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type LinkPreviewProps = {
   children: React.ReactNode;
@@ -31,8 +31,6 @@ export const LinkPreview = ({
   className,
   width = 200,
   height = 125,
-  quality = 50,
-  layout = "fixed",
   isStatic = false,
   imageSrc = "",
 }: LinkPreviewProps) => {
@@ -67,8 +65,9 @@ export const LinkPreview = ({
 
   const translateX = useSpring(x, springConfig);
 
-  const handleMouseMove = (event: any) => {
-    const targetRect = event.target.getBoundingClientRect();
+  const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.target as HTMLElement;
+    const targetRect = target.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
     const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
     x.set(offsetFromCenter);
@@ -78,7 +77,7 @@ export const LinkPreview = ({
     <>
       {isMounted ? (
         <div className="hidden">
-          <img src={src} width={width} height={height} alt="hidden image" />
+          <Image src={src} width={width} height={height} alt="hidden image" />
         </div>
       ) : null}
 
@@ -129,7 +128,7 @@ export const LinkPreview = ({
                   style={{ fontSize: 0 }}
                   target="_blank"
                 >
-                  <img
+                  <Image
                     src={isStatic ? imageSrc : src}
                     width={width}
                     height={height}
