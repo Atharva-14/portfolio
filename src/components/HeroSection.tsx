@@ -78,13 +78,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ index }) => {
               <button
                 className="flex flex-row justify-center items-center gap-2 text-white px-6 py-3 rounded-lg shadow-md
                 text-[1.5rem] font-medium bg-gradient-to-r from-blue-500 to-purple-600 hover:-translate-y-1
-                transition-all duration-300 ease-in-out"
+                transition-all duration-300 ease-in-out cursor-pointer"
                 onClick={handleScrollToProject}
               >
                 <FaFolderOpen /> View Projects
               </button>
               <Link
-                href="#contact"
+                href="mailto:atharva.muratkar1@gmail.com?subject=Portfolio Inquiry&body=Hi Atharva,%0D%0AI'm interested in working with you!"
                 className="bg-white px-6 py-3 rounded-lg shadow-md font-medium flex items-center text-[1.5rem] gap-2
              border border-transparent hover:border-blue-500 hover:text-blue-500 hover:-translate-y-1
              transition-all duration-300 ease-in-out"

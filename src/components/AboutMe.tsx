@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent } from "./ui/Card";
 import { FaDownload } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
+import Link from "next/link";
 
 interface AboutMeProps {
   index: string;
@@ -75,16 +76,19 @@ const AboutMe: React.FC<AboutMeProps> = ({ index }) => {
             </div>
 
             <div className="flex justify-center gap-4">
-              <button
+              <Link
+                href="https://drive.google.com/uc?export=download&id=1WaZd2FM-QzGqI_CsOA1GyrMbq8BQtB3Z"
                 className="group flex flex-row justify-between rounded-lg shadow items-center
-             w-full md:w-auto gap-4 p-4 bg-gradient-to-r from-blue-500 to-purple-600
-             cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                w-full md:w-auto gap-4 p-4 bg-gradient-to-r from-blue-500 to-purple-600
+                cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaDownload className="w-5 h-5 text-white" />
                 <span className="text-white text-[1.35rem] font-medium">
                   Download Resume
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
