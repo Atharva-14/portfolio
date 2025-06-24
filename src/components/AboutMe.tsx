@@ -5,7 +5,11 @@ import { Card, CardContent } from "./ui/Card";
 import { FaDownload } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 
-const AboutMe = () => {
+interface AboutMeProps {
+  index: string;
+}
+
+const AboutMe: React.FC<AboutMeProps> = ({ index }) => {
   return (
     <section className="h-full flex flex-row justify-between relative bg-transparent px-[6.25rem] my-2.5">
       {/* Left Content */}
@@ -13,12 +17,12 @@ const AboutMe = () => {
         {/* Number */}
         <span className="gap-2.5 pt-[2.38rem] pb-6 object-bottom-left">
           <p className="text-[2rem] font-light tracking-[5%] text-[#4F4F4F] align-bottom text-left font-raleway">
-            02
+            {index}
           </p>
         </span>
 
         {/* Title */}
-        <div className="flex flex-row justify-between border-l-[1px] border-[#4F4F4F] pl-4">
+        <div className="flex flex-row justify-between border-l-2 border-[#4F4F4F] pl-4">
           <div className="flex-1 space-y-6 text-center lg:text-left">
             <p className="text-gray-600 max-w-2xl mx-auto lg:mx-0 text-[1.5rem]">
               Hi, I&apos;m{" "}

@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import { FaCode, FaPalette, FaEnvelope } from "react-icons/fa"; // Assuming you have react-icons installed
 import { FaFolderOpen } from "react-icons/fa6";
 
@@ -26,7 +30,17 @@ const techStack: TechStack[] = [
   },
 ];
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  index: string;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ index }) => {
+  const handleScrollToProject = () => {
+    const section = document.getElementById("projects");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="h-screen flex flex-row relative bg-transparent px-[6.25rem] my-2.5">
       {/* Left Content */}
@@ -34,11 +48,11 @@ const HeroSection = () => {
         {/* Number */}
         <span className="gap-2.5 pt-[2.38rem] pb-6 object-bottom-left">
           <p className="text-[2rem] font-light tracking-[5%] text-[#4F4F4F] align-bottom text-left font-raleway">
-            01
+            {index}
           </p>
         </span>
         {/* Title */}
-        <div className="h-full flex flex-row justify-between border-l-[1px] border-[#4F4F4F] pl-4">
+        <div className="h-full flex flex-row justify-between border-l-2 border-[#4F4F4F] pl-4">
           <div className="flex-1 space-y-6 text-center lg:text-left">
             <h1 className="text-5xl md:text-[4.5rem] font-bold leading-tight">
               Hi, I&apos;m{" "}
@@ -61,22 +75,22 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex justify-center lg:justify-start gap-4">
-              <a
-                href="#projects"
+              <button
                 className="flex flex-row justify-center items-center gap-2 text-white px-6 py-3 rounded-lg shadow-md
-                text-[1.25rem] font-medium bg-gradient-to-r from-blue-500 to-purple-600 hover:-translate-y-1
+                text-[1.5rem] font-medium bg-gradient-to-r from-blue-500 to-purple-600 hover:-translate-y-1
                 transition-all duration-300 ease-in-out"
+                onClick={handleScrollToProject}
               >
                 <FaFolderOpen /> View Projects
-              </a>
-              <a
+              </button>
+              <Link
                 href="#contact"
-                className="bg-white px-6 py-3 rounded-lg shadow-md font-medium flex items-center text-[1.25rem] gap-2
+                className="bg-white px-6 py-3 rounded-lg shadow-md font-medium flex items-center text-[1.5rem] gap-2
              border border-transparent hover:border-blue-500 hover:text-blue-500 hover:-translate-y-1
              transition-all duration-300 ease-in-out"
               >
                 <FaEnvelope /> Get in Touch
-              </a>
+              </Link>
             </div>
 
             {/* Tech Stack */}
