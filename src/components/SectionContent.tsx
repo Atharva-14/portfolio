@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { LinkPreview } from "./ui/link-preview";
+import { techIconMap } from "@/lib/techIcons";
 
 interface SectionContentProps {
   title: string;
@@ -8,6 +9,7 @@ interface SectionContentProps {
   url: string;
   image: string;
   index: string;
+  techStack?: string[];
 }
 const SectionContent: React.FC<SectionContentProps> = ({
   title,
@@ -15,6 +17,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
   url,
   image,
   index,
+  techStack,
 }) => {
   return (
     <section className="h-screen flex flex-row relative bg-transparent px-[6.25rem] my-2.5">
@@ -35,11 +38,30 @@ const SectionContent: React.FC<SectionContentProps> = ({
             {title}
           </LinkPreview>
         </span>
-        <span className="flex-1 flex flex-row justify-between">
+        <div className="flex flex-col justify-between">
           <p className="text-gray-600 leading-relaxed border-l-2 border-[#4F4F4F] pl-4 mb-6 font-inter font-normal text-2xl">
             {description}
           </p>
-        </span>
+          <div className="flex flex-wrap gap-4 mb-4 pl-4">
+            {techStack &&
+              techStack.map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm text-[1.25rem] font-medium 
+                  text-gray-800 hover:bg-gray-100 transition-colors duration-300"
+                >
+                  <Image
+                    src={techIconMap[tech]}
+                    alt={tech}
+                    width={14}
+                    height={14}
+                    className="object-cover w-[14px] h-[14px]"
+                  />
+                  <span className="text-gray-600">{tech}</span>
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
 
       {/* Right Image */}

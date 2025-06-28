@@ -1,4 +1,6 @@
 import AboutMe from "@/components/AboutMe";
+import ContactSection from "@/components/ContactSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
 import SectionContent from "@/components/SectionContent";
 import SectionTitle from "@/components/SectionTitle";
@@ -53,6 +55,7 @@ interface Project {
   description: string;
   url: string;
   image: string;
+  techStack?: string[];
 }
 
 async function fetchProjects(): Promise<Project[]> {
@@ -66,6 +69,7 @@ async function fetchProjects(): Promise<Project[]> {
       description: docData.description ?? "",
       url: docData.url ?? "",
       image: docData.image ?? "",
+      techStack: docData.techStack ?? [],
     };
   });
 }
@@ -84,7 +88,7 @@ export default async function Home() {
       {/* <PortfolioTitle /> */}
       <SectionTitle upperTitle="2025" title="Portfolio" />
       <HeroSection index={formatter.format(sectionIndex++)} />
-      <SectionTitle upperTitle="Part 1" title="About Me" />
+      <SectionTitle upperTitle="Part 1" title="About Me" id="aboutme" />
       <AboutMe index={formatter.format(sectionIndex++)} />
       <SectionTitle upperTitle="Part 2" title="Projects" id="projects" />
       {projects &&
@@ -95,9 +99,15 @@ export default async function Home() {
             description={project.description}
             url={project.url}
             image={project.image}
+            techStack={project.techStack}
             index={formatter.format(sectionIndex++)}
           />
         ))}
+      <SectionTitle upperTitle="Part 3" title="Experience" id="experience" />
+      {/* <TimelineDemo /> */}
+      <ExperienceSection index={formatter.format(sectionIndex++)} />
+      <SectionTitle upperTitle="Part 4" title="Contact" id="contact" />
+      <ContactSection index={formatter.format(sectionIndex++)} />
     </div>
   );
 }

@@ -1,34 +1,11 @@
 "use client";
 
+import { techIconMap } from "@/lib/techIcons";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaCode, FaPalette, FaEnvelope } from "react-icons/fa"; // Assuming you have react-icons installed
 import { FaFolderOpen } from "react-icons/fa6";
-
-interface TechStack {
-  name: string;
-  src: string;
-}
-
-const techStack: TechStack[] = [
-  {
-    name: "React",
-    src: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/reactjs.svg",
-  },
-  {
-    name: "Next.js",
-    src: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/nextjs.svg",
-  },
-  {
-    name: "Redux",
-    src: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/redux.svg",
-  },
-  {
-    name: "JavaScript",
-    src: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/javascript.svg",
-  },
-];
 
 interface HeroSectionProps {
   index: string;
@@ -95,19 +72,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({ index }) => {
 
             {/* Tech Stack */}
             <div className="flex justify-center lg:justify-start gap-4 mt-6 flex-wrap">
-              {techStack.map((tech) => (
+              {Object.entries(techIconMap).map(([tech, iconUrl]) => (
                 <div
-                  key={tech.name}
+                  key={tech}
                   className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm text-[1.25rem] font-medium text-gray-800"
                 >
                   <Image
-                    src={tech.src}
-                    alt={tech.name}
+                    src={iconUrl}
+                    alt={tech}
                     width={14}
                     height={14}
                     className="object-cover w-[14px] h-[14px]"
                   />{" "}
-                  <span>{tech.name}</span>
+                  <span>{tech}</span>
                 </div>
               ))}
             </div>
