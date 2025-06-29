@@ -14,7 +14,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   return (
     <div
       id={id}
-      className="h-screen flex flex-col relative bg-transparent px-[6.25rem] my-2.5"
+      className="h-fit md:h-screen flex flex-col relative bg-transparent px-[4rem] md:px-[6.25rem] my-2.5"
     >
       {/* Vertical Line (stick to edge, not affected by padding) */}
       <svg
@@ -34,7 +34,10 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
         </p>
       </span>
       <span className="gap-2.5 pr-2.5 pb-12 object-left-top">
-        <h1 className="font-bold leading-[auto] text-gray-800 text-left align-top font-helvatica text-9xl">
+        <h1
+          className="font-bold leading-[auto] text-gray-800 text-left align-top font-helvatica 
+        text-[5.5rem] md:text-8xl lg:text-9xl "
+        >
           {title}
         </h1>
       </span>

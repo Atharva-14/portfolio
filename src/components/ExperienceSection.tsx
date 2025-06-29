@@ -18,9 +18,9 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
   ];
 
   return (
-    <section className="h-full flex flex-row justify-between relative bg-transparent px-[6.25rem] my-2.5">
+    <section className="h-full md:h-screen flex flex-col md:flex-row justify-between relative bg-transparent px-[4rem] md:px-[6.25rem] my-2.5">
       {/* Left Content */}
-      <div className="md:w-1/2 md:max-w-3xl h-full flex flex-col pb-[6.25rem] relative">
+      <div className="md:w-1/2 md:max-w-3xl h-full flex flex-col md:pb-[6.25rem] relative">
         {/* Number */}
         <span className="gap-2.5 pt-[2.38rem] pb-6 object-bottom-left">
           <p className="text-[2rem] font-light tracking-[5%] text-[#4F4F4F] align-bottom text-left font-raleway">
@@ -69,7 +69,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
                     ))}
                   </div>
                   <div>
-                    <ul className="list-disc pl-6 text-gray-700 text-[1.25rem] space-y-1">
+                    <ul className="list-disc text-start pl-6 text-gray-700 text-[1.25rem] space-y-1">
                       <li>
                         Developed scalable, enterprise-grade web applications
                         for Cardinal Health using <b>React.js</b>, <b>Redux</b>,
@@ -122,7 +122,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
                 className="rounded-2xl object-cover p-2 w-[460px] h-[300px]"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mt-6">
               <Card className="bg-white">
                 <CardContent>
                   <div className="flex flex-col items-center gap-2">
@@ -148,11 +148,12 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
                 </CardContent>
               </Card>
             </div>
-            <div className="flex items-center justify-center mt-6">
+
+            <div className="w-full flex justify-center items-center mt-6">
               <Link
                 href="https://drive.google.com/uc?export=download&id=1WaZd2FM-QzGqI_CsOA1GyrMbq8BQtB3Z"
                 className="group flex flex-row justify-between rounded-lg shadow items-center
-                w-full md:w-auto gap-4 p-4 bg-gradient-to-r from-blue-500 to-purple-600
+                w-fit md:w-auto gap-4 p-4 bg-gradient-to-r from-blue-500 to-purple-600
                 cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out"
                 target="_blank"
                 rel="noopener noreferrer"

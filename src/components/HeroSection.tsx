@@ -19,9 +19,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ index }) => {
     }
   };
   return (
-    <section className="h-screen flex flex-row relative bg-transparent px-[6.25rem] my-2.5">
+    <section className="h-fit md:h-screen flex flex-col md:flex-row relative bg-transparent px-[4rem] md:px-[6.25rem] my-2.5">
       {/* Left Content */}
-      <div className="md:w-1/2 h-full flex flex-col pb-[6.25rem] relative">
+      <div className="md:w-1/2 md:h-full flex flex-col md:pb-[6.25rem] relative">
         {/* Number */}
         <span className="gap-2.5 pt-[2.38rem] pb-6 object-bottom-left">
           <p className="text-[2rem] font-light tracking-[5%] text-[#4F4F4F] align-bottom text-left font-raleway">
@@ -93,11 +93,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ index }) => {
       </div>
 
       {/* Right Image Container - Blobs will be inside this */}
-      <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center py-[2.38rem] relative overflow-hidden">
-        {/* Background Blobs for the Image Container */}
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob -z-10"></div>
-        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000 -z-10"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000 -z-10"></div>
+      <div
+        className="md:w-1/2 md:mt-0 flex justify-center items-center py-[2.38rem] relative overflow-hidden
+      border-l-2 border-[#4F4F4F] md:border-l-0"
+      >
+        <div className="hidden md:block absolute top-1/4 left-1/4 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob -z-10"></div>
+        <div className="hidden md:block absolute top-1/2 right-1/4 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000 -z-10"></div>
+        <div className="hidden md:block absolute bottom-1/4 left-1/2 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000 -z-10"></div>
 
         {/* Your Image Card (ensure it has a z-index if needed to be above blobs) */}
         <div className="flex-1 flex justify-center items-center relative mb-10 lg:mb-0 z-10">
