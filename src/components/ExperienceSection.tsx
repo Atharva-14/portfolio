@@ -40,8 +40,8 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
 
             {/* CTA Buttons */}
             <div className="justify-center lg:justify-start gap-4 grid grid-cols-1">
-              <Card className="max-w-full">
-                <CardContent className="flex flex-col items-start gap-4">
+              <Card className="max-w-full p-5">
+                <CardContent className="flex flex-col items-start gap-6">
                   <div className="w-full h-fit flex justify-between items-center gap-4 font-raleway">
                     <div className="flex flex-col gap-0 items-start">
                       <h1 className="font-bold text-[1.5rem]">
@@ -109,7 +109,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
         </div>
       </div>
 
-      {/* Right Image Container - Blobs will be inside this */}
+      {/* Right Content */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center py-[2.38rem] relative overflow-hidden">
         <Card className="bg-[#f4f6ff]">
           <CardContent className="flex flex-col p-10 gap-4">
@@ -127,7 +127,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
                 <CardContent>
                   <div className="flex flex-col items-center gap-2">
                     <span className="text-[2.5rem] font-bold text-[#2563eb] font-raleway">
-                      4+
+                      2.5+
                     </span>
                     <span className="text-[1.2rem] font-raleway">
                       Years Experience
@@ -139,7 +139,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index }) => {
                 <CardContent>
                   <div className="flex flex-col items-center gap-2">
                     <span className="text-[2.5rem] font-bold text-[#16a34a] font-raleway">
-                      15+
+                      10+
                     </span>
                     <span className="text-[1.2rem] font-raleway">
                       Technologies Mastered

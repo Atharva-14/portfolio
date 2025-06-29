@@ -27,6 +27,14 @@ const Navbar = () => {
         <ul className="flex space-x-14 font-medium text-black text-[1.25rem]">
           <li>
             <Link
+              href="#hero"
+              className="transition-all duration-300 hover:text-[1.5rem]"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
               href="#aboutme"
               className="transition-all duration-300 hover:text-[1.5rem]"
             >

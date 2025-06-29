@@ -30,8 +30,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ index }) => {
                 Atharva Muratkar
               </span>{" "}
               — a passionate{" "}
-              <span className="font-bold">Frontend Developer</span> with over{" "}
-              <span className="font-bold">2.5 years of experience</span>{" "}
+              <span className="font-bold">Frontend Developer</span> with around{" "}
+              <span className="font-bold">3 years of experience</span>{" "}
               crafting fast, responsive, and accessible web applications.
               <br /> <br />I specialize in{" "}
               <span className="font-bold">React.js</span> and{" "}

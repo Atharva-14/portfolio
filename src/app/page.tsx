@@ -86,7 +86,7 @@ export default async function Home() {
   return (
     <div className="h-full flex flex-col">
       {/* <PortfolioTitle /> */}
-      <SectionTitle upperTitle="2025" title="Portfolio" />
+      <SectionTitle upperTitle="2025" title="Portfolio" id="hero" />
       <HeroSection index={formatter.format(sectionIndex++)} />
       <SectionTitle upperTitle="Part 1" title="About Me" id="aboutme" />
       <AboutMe index={formatter.format(sectionIndex++)} />
