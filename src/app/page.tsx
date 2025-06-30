@@ -8,44 +8,50 @@ import { db } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 export const metadata = {
-  title: "Atharva Muratkar | Portfolio 2025",
+  title: "Atharva Muratkar – React & Next.js Frontend Developer",
   description:
-    "Explore the portfolio of Atharva Muratkar — React.js developer showcasing projects, skills, and experience.",
+    "Hi, I'm Atharva Muratkar – a frontend developer specializing in React.js, Next.js, and UI/UX design. I build fast, accessible, and beautiful web applications.",
   keywords: [
     "Atharva Muratkar",
-    "Portfolio",
-    "React Developer",
     "Frontend Developer",
-    "Next.js",
+    "React.js Developer",
+    "Next.js Developer",
+    "JavaScript Developer",
+    "UI Developer",
+    "MERN Stack",
+    "Tailwind CSS",
+    "Portfolio",
+    "Frontend Engineer",
   ],
-  authors: [
-    {
-      name: "Atharva Muratkar",
-      url: "https://portfolio-kappa-seven-51.vercel.app/",
-    },
-  ],
+  creator: "Atharva Muratkar",
+  metadataBase: new URL("https://atharva-muratkar-portfolio.vercel.app/"),
+  alternates: {
+    canonical: "https://atharva-muratkar-portfolio.vercel.app/",
+  },
   openGraph: {
-    title: "Atharva Muratkar | Portfolio 2025",
-    description: "Explore projects and experience by Atharva Muratkar.",
-    url: "https://portfolio-kappa-seven-51.vercel.app/",
-    siteName: "Atharva Portfolio",
+    title: "Atharva Muratkar – Frontend Developer Portfolio",
+    description:
+      "React.js & Next.js developer crafting responsive, fast, and beautiful web apps. View projects, skills, and contact info.",
+    url: "https://atharva-muratkar-portfolio.vercel.app/",
+    siteName: "Atharva Muratkar Portfolio",
     images: [
       {
-        url: "https://your-portfolio-url.com/og-image.png", // use your actual image URL
+        url: "https://atharva-muratkar-portfolio.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Atharva Portfolio Preview",
+        alt: "Atharva Muratkar Portfolio OpenGraph Banner",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Atharva Muratkar | Portfolio 2025",
+    title: "Atharva Muratkar – React & Next.js Frontend Developer",
     description:
-      "Explore the portfolio of Atharva Muratkar, a skilled React.js developer.",
-    images: ["https://your-portfolio-url.com/og-image.png"],
+      "Frontend developer building modern, performant UIs with React, Next.js, and Tailwind CSS.",
+    images: ["https://atharva-muratkar-portfolio.vercel.app//og-image.png"],
+    creator: "@yourTwitterHandle", // Optional: Replace with your handle
   },
 };
 

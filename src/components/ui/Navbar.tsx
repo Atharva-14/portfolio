@@ -24,7 +24,7 @@ const Navbar = () => {
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
-        <ul className="flex space-x-14 font-medium text-black text-[1.25rem]">
+        <ul className="flex space-x-8 md:space-x-14 font-medium text-black text-[1.25rem]">
           <li>
             <Link
               href="#hero"

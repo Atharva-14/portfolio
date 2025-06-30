@@ -11,7 +11,7 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ index }) => {
   return (
-    <section className="h-full md:h-screen flex flex-col md:flex-row justify-between relative bg-transparent px-[4rem] md:px-[6.25rem] my-2.5">
+    <section className="h-full flex flex-col md:flex-row justify-between relative bg-transparent px-[4rem] md:px-[6.25rem] my-2.5">
       {/* Left Content */}
       <div className="md:w-1/2 md:max-w-3xl h-full flex flex-col md:pb-[6.25rem] relative">
         {/* Number */}
@@ -98,12 +98,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ index }) => {
       <div className="hidden lg:flex md:w-1/2 mt-10 md:mt-0 justify-center items-center py-[2.38rem] relative overflow-hidden">
         <div className="relative w-fit mx-auto mt-10">
           {/* Background tilt shape */}
-          <div className="absolute top-0 left-0 w-[480px] h-[360px] bg-purple-200 rounded-[20px] rotate-[10deg] z-0" />
+          <div className="absolute top-0 left-0 w-[480px] h-[510px] bg-purple-200 rounded-[20px] rotate-[10deg] z-0" />
 
           {/* Main card with white border */}
           <div className="relative z-10 rounded-[20px] bg-white p-2 shadow-lg">
             <Image
-              src="/profile-landscape.webp"
+              src="https://blush.design/api/download?shareUri=eQ_9urKLamoFpyXE&c=Skin_0%7Ed08b5b&w=800&h=800&fm=png"
               alt="Profile"
               width={460}
               height={360}
