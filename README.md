@@ -3,7 +3,7 @@
 
 This is my **personal portfolio website** built with **Next.js**, **React**, **Tailwind CSS**, and **TypeScript**. It showcases my skills, experience, and selected projects. The goal is to create a professional online presence and demonstrate my frontend development capabilities.
 
-![Homepage Screenshot](./public/images/hero-section.png)
+![Homepage Screenshot](./public/hero-section.png)
 *Preview of the homepage section*
 
 ## ✨ Features
@@ -17,7 +17,7 @@ This is my **personal portfolio website** built with **Next.js**, **React**, **T
 - Resume download
 - SEO optimized with metadata and Open Graph tags
 
-![Projects Section](./public/images/project-section.png)
+![Projects Section](./public/project-section.png)
 *Project listing section dynamically fetched from Firestore*
 
 ## 🛠️ Tech Stack
