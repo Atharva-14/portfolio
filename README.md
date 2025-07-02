@@ -26,15 +26,16 @@ This is my **personal portfolio website** built with **Next.js**, **React**, **T
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Firebase](https://firebase.google.com/) (for project data & hosting)
+- [Firebase](https://firebase.google.com/) (for project data)
+- [Vercel](https://vercel.com/) (for hosting)
 
 ## 🚀 Getting Started
 
 To run the project locally:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
+git clone https://github.com/Atharva-14/portfolio.git
+cd portfolio
 npm install
 npm run dev
 ```
@@ -60,4 +61,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Built with ❤️ by [Your Name](https://yourwebsite.com)
+Built with ❤️ by [Atharva Muratkar](https://atharva-muratkar-portfolio.vercel.app/)
